@@ -1,22 +1,51 @@
-.App {
-  text-align: center;
+.App-container {
+  display: grid;
+  grid-template-rows: 75vh 25vh;
+  grid-template-columns: 35vw 30vw 35vw;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App-container > *{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+.App-card{
+  border-radius: 10px;
+  border: 1px solid  black;
+}
+
+.App-logo{
+  height: 50%;
+  width: 75%;
+  object-fit: contain
+}
+
+#App-feedback{
+  font-size: 3vh;
+  font-weight: bold
+}
+
+
+@keyframes removeLike{
+  from{
+    transform: translateX(0vw)
+  }
+
+  to{
+    transform: translateX(-100vw);
+    display: none
+  }
+}
+
+@keyframes addLike{
+  from{
+    transform: translateX(0vw)
+  }
+
+  to{
+    transform: translateX(100vw) ;
+    display: none
+  }
 }
